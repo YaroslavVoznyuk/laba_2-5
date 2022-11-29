@@ -37,6 +37,15 @@ namespace ConsoleApp2
 
 
         /// <summary>
+        /// Метод, определяющий логику лечения
+        /// </summary>
+        public override void Treatment(uint Hp = 10)
+        {
+            Hp = (uint)(Hp * 1.5);
+            base.Treatment(Hp);
+        }
+
+        /// <summary>
         /// Лечение
         /// </summary>
         /// <returns></returns>
