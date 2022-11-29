@@ -21,6 +21,7 @@ namespace ConsoleApp2
             List<IRampage> rampages = new List<IRampage>()
             {
                 new Hunter(),
+                new Warrior(),
             };
 
             foreach (var e in rampages)
@@ -31,6 +32,7 @@ namespace ConsoleApp2
             }
 
             Console.WriteLine(druid.HeroInformation());
+            Console.WriteLine("Recharged attack");
 
             foreach (var e in rampages)
             {
@@ -41,19 +43,27 @@ namespace ConsoleApp2
 
             foreach (var e in rampages)
             {
-                e.UltraAttack(druid);
+                e.UltraAttack(hunter);
 
                 //Console.WriteLine(druid.HeroInformation());
             }
-            Console.WriteLine(druid.HeroInformation());
+            Console.WriteLine(hunter.HeroInformation());
+            Console.WriteLine("Recharged attack");
 
             foreach (var e in rampages)
             {
-                e.UltraAttack(druid);
+                e.Recharge();
 
                 //Console.WriteLine(druid.HeroInformation());
             }
-            Console.WriteLine(druid.HeroInformation());
+
+            foreach (var e in rampages)
+            {
+                e.UltraAttack(warrior);
+
+                //Console.WriteLine(druid.HeroInformation());
+            }
+            Console.WriteLine($"damaged warrior = {warrior.HeroInformation()}");
         }
     }
 }
