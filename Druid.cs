@@ -35,6 +35,7 @@ namespace ConsoleApp2
         {
         }
 
+
         /// <summary>
         /// Лечение
         /// </summary>

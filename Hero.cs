@@ -113,6 +113,22 @@ namespace ConsoleApp2
             }
         }
 
+        /// <summary>
+        /// Логика отправки героя в таверну
+        /// </summary>
+        protected void Die()
+        {
+            Console.WriteLine($"У {this.Name} Критический уровень запаса жизни");
+            this.Tavern();
+        }
+
+        /// <summary>
+        /// Информация о нахождении в таверне
+        /// </summary>
+        protected void Tavern()
+        {
+            Console.WriteLine($"Герой {this.Name} в таверне");
+        }
 
         /// <summary>
         /// Информация о герое
